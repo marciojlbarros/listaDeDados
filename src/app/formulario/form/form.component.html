@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-12">
+
+            <form class="form-group mb-3">
+                <select class="form-select" [(ngModel)]="paisSelecionado.id" (change)="onSelect($any($event.target).value)" id="">
+                    <option selected>Selecione o País:</option>
+                    <option *ngFor="let pais of paises" value="{{pais.id}}"> {{pais.nome}} </option>
+                </select>
+            </form>
+
+            <div class="form-group">
+                <select class="form-select">
+                    <option *ngIf="paisSelecionado.id == 0" value="">Selecione:</option>
+                    <option *ngFor="let cidade of cidades" value="{{cidade.id}}"> {{cidade.nome}} </option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+</div>
