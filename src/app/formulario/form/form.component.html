@@ -4,7 +4,7 @@
 
             <form class="form-group mb-3">
                 <select class="form-select" [(ngModel)]="paisSelecionado.id" (change)="onSelect($any($event.target).value)" id="">
-                    <option selected>Selecione o País:</option>
+                    <option>Selecione o País:</option>
                     <option *ngFor="let pais of paises" value="{{pais.id}}"> {{pais.nome}} </option>
                 </select>
             </form>
